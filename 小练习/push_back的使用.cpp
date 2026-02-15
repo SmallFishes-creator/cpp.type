@@ -11,5 +11,12 @@ int main(void)
     s.push_back('l');
     s.push_back('d');
     cout << s << endl;
+    for(int i = 0;i < 3;i++)
+        s.push_back('x');
+    for(int i = 0;i < 3;i++)
+    {
+        cout << s << endl;
+        s.pop_back();
+    }
     return 0;
 }
