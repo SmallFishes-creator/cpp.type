@@ -42,11 +42,14 @@ void test02()
 person dowork()
 {
     person p1;
+    cout << "p1's address:"<< (int*)&p1 << endl;
     return p1;
 }
 void test03()
 {
     person p2 = dowork();
+    cout << "p2's address:"<< (int*)&p2 << endl;
+
 }
 int main()
 {
@@ -55,5 +58,6 @@ int main()
     test02();
     cout << "---------------" << endl;
     test03();
+    //tip:test03->c++编译器优化了
     return 0;
 }
