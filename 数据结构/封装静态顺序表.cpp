@@ -37,7 +37,12 @@ public:
         arr[1] = e;
         n++;
     }
-    //在容易位置添加数据
+    //尾删
+    void pop_back()
+    {
+        n--;
+    }
+    //在任意位置添加数据
     void insert_pos(int pos,elem_type e)
     {
         for(int i = n;i >= pos;i--)
@@ -60,9 +65,13 @@ int main()
     l1.push_front(3);
     l1.push_front(1);
     l1.print();
-    l1.insert_pos(4,0);
-    l1.insert_pos(4,0);
-    l1.insert_pos(4,0);
+    l1.insert_pos(5,0);
+    l1.insert_pos(5,0);
+    l1.insert_pos(5,0);
+    l1.print();
+    l1.pop_back();
+    l1.pop_back();
+    l1.pop_back();
     l1.print();
     return 0;
 }
