@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+const int N = 1e5 + 10;
+int n;
+vector<int> edges[N];
+int main()
+{
+    cin >> n;
+    for(int i = 0;i < n;i++)
+    {
+        int a,b;
+        cin >> a >> b;
+        edges[a].push_back(b);
+        edges[b].push_back(a);
+    }
+    return 0;
+}
