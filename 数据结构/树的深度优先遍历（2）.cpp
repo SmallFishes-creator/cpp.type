@@ -1,4 +1,4 @@
-//链式前向星储存
+//链式前向星储存版
 #include <iostream>
 using namespace std;
 const int N = 1e5 + 10;
