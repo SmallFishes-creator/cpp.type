@@ -12,7 +12,7 @@ void add(int a,int b)
 int main()
 {
     cin >> n;
-    for(int i = 0;i < n;n++)
+    for(int i = 1;i < n;n++)
     {
         int a,b;
         cin >> a >> b;
