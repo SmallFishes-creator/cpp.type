@@ -8,7 +8,7 @@ int main()
 {
     int t;
     cin >> t;
-    while(t--)
+    for(int T = 1;T <= t;T++)
     {
         int n;
         cin >> n;
@@ -98,7 +98,7 @@ int main()
             if(total < Min && flag)
                 Min = total;
         }
-        cout << "Case" << n - t << ": ";
+        cout << "Case " << T << ": ";
         if(Min == n * n + 1)
             cout << -1 << endl;
         else
