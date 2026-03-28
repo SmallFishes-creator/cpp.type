@@ -35,8 +35,24 @@ int main()
         }
     }
     int Max = INT_MIN;
-    if(m > mx || m > my)
+    if(m > mx && m > my)
         Max = sum[mx][my];
+    else if(m > mx)
+    {
+        for(int j = 1; j <= my - m + 1; j++)
+        {
+            int total = sum[mx][j + m - 1] - sum[0][j + m - 1] - sum[mx][j - 1] + sum[0][j - 1];
+            if(total > Max) Max = total;
+        }
+    }
+    else if(m >= my)
+    {
+        for(int i = 1; i <= mx - m + 1; i++)
+        {
+            int total = sum[i + m - 1][my] - sum[i - 1][my] - sum[i + m - 1][0] + sum[i - 1][0];
+            if(total > Max) Max = total;
+        }
+    }
     else
     {
         for(int i = 1;i <= mx - m + 1;i++)
