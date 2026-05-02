@@ -1,51 +1,55 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include <algorithm>
 using namespace std;
-queue<int> arr[20];
-int record[20] = {4};
+deque<int> arr[20];
+int record[20];
 void recur(int num)
 {
     if(num == 13) return;
-    arr[num].push(num);
     int cur = arr[num].front();
-    arr[num].pop();
+    arr[num].pop_front();
     record[num]--;
     recur(cur);
 }
 int main()
 {
+    fill(record + 1,record + 21,4);
     for(int i = 1;i <= 13;i++)
     {
         for(int j = 0;j < 4;j++)
         {
-            int tmp;
+            int cur = 0;
+            char tmp;
             cin >> tmp;
             switch(tmp)
             {
-            case 0:
-                tmp = 10;
+            case '0':
+                cur = 10;
                 break;
             case 'A':
-                tmp = 1;
+                cur = 1;
                 break;
             case 'J':
-                tmp = 11;
+                cur = 11;
                 break;
             case 'Q':
-                tmp = 12;
+                cur = 12;
                 break;
             case 'K':
-                tmp = 13;
+                cur = 13;
                 break;
+            default:
+                cur = tmp - '0';
             }
-            arr[i].push(tmp);
+            arr[i].push_front(cur);
         }
     }
     while(record[13])
     {
-        int num = arr[13].front();
-        arr[13].pop();
+        int num = arr[13].back();
+        arr[13].pop_back();
         record[13]--;
         recur(num);
     }
