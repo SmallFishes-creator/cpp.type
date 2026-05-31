@@ -79,12 +79,7 @@ public:
 };
 int main()
 {
-    vector<string> strs = {
-        "tars",
-        "rats",
-        "arts",
-        "star"
-    };
+    vector<string> strs = {"tars","rats","arts","star"};
     Solution s;
     int ans = s.numSimilarGroups(strs);
     cout << ans << endl;

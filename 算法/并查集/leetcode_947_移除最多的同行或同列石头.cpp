@@ -75,17 +75,9 @@ public:
         return ans;
     }
 };
-
 int main()
 {
-    vector<vector<int>> stones = {
-        {0, 0},
-        {0, 1},
-        {1, 0},
-        {1, 2},
-        {2, 1},
-        {2, 2}
-    };
+    vector<vector<int>> stones = {{0, 0},{0, 1},{1, 0},{1, 2},{2, 1},{2, 2}};
     Solution s;
     int ans = s.removeStones(stones);
     cout << ans << endl;

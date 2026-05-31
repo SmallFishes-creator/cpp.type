@@ -8,7 +8,6 @@ vector<int> f;
 vector<int> sz;
 vector<unordered_map<int,int>> cnt;
 stack<int> st;
-
 class Solution {
 public:
     int find(int e)

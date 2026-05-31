@@ -83,11 +83,7 @@ int main()
 {
     int n = 6;
 
-    vector<vector<int>> meetings = {
-        {1, 2, 5},
-        {2, 3, 8},
-        {1, 5, 10}
-    };
+    vector<vector<int>> meetings = {{1, 2, 5},{2, 3, 8},{1, 5, 10}};
     int firstPerson = 1;
     Solution s;
     vector<int> ans = s.findAllPeople(n, meetings, firstPerson);
